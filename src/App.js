@@ -1,11 +1,12 @@
 import React from "react";
-
-import "./main.css";
+import Home from "./components/Home";
+import MainStyle from "./MainStyle";
 
 function App() {
   return (
     <>
-      <div>ِِApp</div>
+      <MainStyle />
+      <Home />
     </>
   );
 }
