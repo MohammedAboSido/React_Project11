@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   AttachMoneyIcon,
   BarChartIcon,
@@ -28,10 +29,12 @@ export default function Sidebar() {
           <SidebarMenu>
             <SidebarTitle>Dashboard</SidebarTitle>
             <SidebarList>
-              <SidebarListItem>
-                <LineStyleIcon />
-                Home
-              </SidebarListItem>
+              <Link to={"/"} className="link">
+                <SidebarListItem>
+                  <LineStyleIcon />
+                  Home
+                </SidebarListItem>
+              </Link>
               <SidebarListItem>
                 <TimelineIcon />
                 Analytics
@@ -46,14 +49,18 @@ export default function Sidebar() {
           <SidebarMenu>
             <SidebarTitle>Quick Menu</SidebarTitle>
             <SidebarList>
-              <SidebarListItem>
-                <PermIdentityIcon />
-                Users
-              </SidebarListItem>
-              <SidebarListItem>
-                <StorefrontIcon />
-                Products
-              </SidebarListItem>
+              <Link to={"/users"} className="link">
+                <SidebarListItem>
+                  <PermIdentityIcon />
+                  Users
+                </SidebarListItem>
+              </Link>
+              <Link to={"/products"} className="link">
+                <SidebarListItem>
+                  <StorefrontIcon />
+                  Products
+                </SidebarListItem>
+              </Link>
               <SidebarListItem>
                 <AttachMoneyIcon />
                 Transactions
